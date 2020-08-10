@@ -36,6 +36,8 @@ describe('<Todo /> component Unit Tests', () => {
 
     it('should call onClick handler when Todo component is clicked', ()=>{
         const component = shallow(<Todo {...props} />);
+        component.simulate('click');
+        expect(mockFn).toHaveBeenCalledTimes(1);
         
       
     })
